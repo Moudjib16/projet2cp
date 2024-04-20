@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <div class="logo">
+      <p>Fi Tri9i</p>  
+      <img src="/home/pics/car.svg" class="logo_img">
+      </div>
+
+      <a href="../recherche/pass.html" class="Recherche">
+        <img src="/home/pics/rech.svg" class="rech">
+        <li class="R">Recherche</li>
+      </a>
+
+      <a href="./publier/page1" class="pub">
+        <img src="/home/pics/plus.svg" class="plus">
+        <li class="Publiertrajet">Publier trajet</li>
+      </a>
+       <!-- this place is important it change depending on the user-->
+      <div class="auth">
+        <p class="user-name" id="user-name">Kadache ahmed rami</p>
+        <img src="/home/pics/pfp.svg" class="pfp">
+        <img src="/home/pics/arrow.svg" class="arrow" id="arrow">
+      </div>
+    </ul>
+     
+    <div class="menu" id="menu"></div>
+
+  </nav>
+
+  <main class="content">
+
+   
+    <div class="box">
+      <div class="empty"></div>
+      <div class="part1">Trouver Votre prochaine Destination</div>
+
+      <div class="search">
+
+        <img src="/home/pics/pos.svg" class="pos">
+        <input type="text" class="input1" id="input1" placeholder="Où souhaitez-vous aller ?">
+        <div class="vertical"></div>
+      
+        <img src="/home/pics/cal.svg" class="cal">
+        <input type="date" class="input2" id="input2" placeholder="Aujourd'hui">
+        <div class="vertical"></div>
+
+
+        <img src="/home/pics/pp.svg" class="pp">
+        <input type="number" class="input3" id="input3" placeholder="01">
+       
+        <button class="look" id="look">Recherche</button>
+      </div>
+
+    </div>
+
+
+    <div class="sanction0">
+      <h1 class="subtit0">Pourquoi Tu Nous Choisis ?</h1>
+      
+      <div class="subsac0">
+        <div class="subbox0">
+          <img class="subimg" src="/home/pics/coins.svg">
+          <h1 class="tit0">Vos trajets préférés à petits prix</h1>
+          <p class="tex0">Où que vous alliez, en bus ou en covoiturage, trouvez le trajet idéal parmi notre large choix . </p>
+        </div>
+
+        <div class="subbox1">
+          <img class="subimg" src="/home/pics/shield.svg">
+          <h1 class="tit1">Voyagez en toute confiance</h1>
+          <p class="tex1">Où que vous alliez, en bus ou en covoiturage, trouvez le trajet idéal parmi notre large choix .</p>
+        </div>
+        <div class="subbox2">
+          <img class="subimg" src="/home/pics/flash.svg">
+          <h1 class="tit0">Recherchez, cliquez et réservez ! </h1>
+          <p class="tex2">Où que vous alliez, en bus ou en covoiturage, trouvez le trajet idéal parmi notre large choix .</p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="band">
+
+      <div class="shortcut"> <p>Alger ⟶ Bejaia &ThinSpace;400DA</p><p class="c">></p> </div>
+      <div class="shortcut"> <p>Oran ⟶ Constantine &ThinSpace;1000DA</p><p class="c">></p> </div>
+      <div class="shortcut"> <p>Alger ⟶ Batna &ThinSpace;500DA</p><p class="c">></p> </div>
+    </div>
+
+
+    <div class="sanction1">
+
+      <div class="half0">
+        <div class="color0"><img src="/home/pics/pips.svg" class="pips">  </div>
+        
+        <div class="element0">
+          <h1 class="ht">Découvrez de nouvelles villes sans vous ruiner avec les bus FI TRI9I !</h1>
+          <p class="sub-ht">dévoilez leurs charmes cachés et plongez dans l'excitation de l'inconnu. Laissez-nous vous guider vers des aventures urbaines inoubliables."</p>
+          <a href="notready.html" class="but0"><p>Decouvrir notre offre</p></a>
+        </div>
+      </div>
+
+      <div class="half1">
+        <div class="element1">
+          <h1 class="ht">Aidez-nous à vous protéger contre les arnaques</h1>
+          <p class="sub-ht">Chez BlaBlaCar, nous mettons tout en œuvre pour vous proposer une plateforme aussi sécurisée que possible. Mais les tentatives d'arnaque demeurent une réalité,</p>
+          <a href="notready.html" class="but1"><p>Decouvrir notre offre</p></a>
+        </div>
+        <div class="color1"> <img src="/home/pics/wave.svg" class="wave"> </div>
+      </div>
+
+
+    </div>
+    
+
+    <div class="sanction2">
+
+
+      <div class="card0">
+        <img src="/home/pics/poep.svg"  class="last-img1">
+       
+        <h1 class="bigt0">À propos</h1>
+        <p class="smallt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <a href="notready.html" class="more">En savoir plus</a>
+      </div>
+
+      <div class="card1">
+        <img src="/home/pics/paper.svg" class="last-img0">
+        <h1 class="bigt1">Espace presse</h1>
+        <p class="smallt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <a href="notready.html" class="more">En savoir plus</a>
+      </div>
+
+      <div class="card0">
+        <img src="/home/pics/home.svg"  class="last-img2">
+        <h1 class="bigt0">Citoyens du monde</h1>
+        <p class="smallt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <a href="notready.html" class="more">En savoir plus</a>
+      </div>
+    </div>
+  </main>
+  <%- include('./partials/footer.ejs') %>
+<script src="/home/script.js"></script>
+</body>
+</html>

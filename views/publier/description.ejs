@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/publier/description/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;700&display=swap">
+  <title >Fi Tri9i</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <a class="logo" href="../../homepage/pass.html">
+        <p>Fi Tri9i</p>  
+        <img src="pics/car.svg" class="logo_img">
+        </a>
+  
+        
+        <a href="../../recherche/pass.html" class="pub">
+        <img src="pics/rech.svg" class="plus">
+        <li class="Publiertrajet">Recherche</li>
+      </a>
+
+       <!-- this place is important it change depending on the user-->
+      <div class="auth">
+        <p class="user-name" id="user-name">Kadache ahmed rami</p>
+        <img src="pics/pfp.svg" class="pfp">
+        <img src="pics/arrow.svg" class="arrow" id="arrow">
+      </div>
+    </ul>
+     
+    <div class="menu" id="menu"></div>
+
+  </nav>
+
+
+  <main class="content">
+    <div class="row-btn"> 
+      <button id="btn1" ></button>
+      <button id="btn2" ></button>
+      <button id="btn3" ></button>
+      <button id="btn4" ></button>
+      <button id="btn5" ></button>
+      <button id="btn6" ></button>
+      <button id="btn7" ></button>
+      <button id="btn8" ></button>
+      <button id="btn9" ></button>
+    </div>
+    <h1 class="title">Quelque chose à ajouter sur votre trajet ?</h1>
+     <textarea maxlength="80" class="in" placeholder="Bonjour ! je vais voir ma famille . J'ai beaucouop de place dans le coffre ." id="description"></textarea>
+    <div class="row1">
+      <button class="precedent" id="precedent">précédent</button>
+      <button class="prochaine" id="prochaine">continuer</button>
+    </div>
+  </main>
+
+
+  <script>
+    document.getElementById('prochaine').addEventListener('click', () => {
+         const divContent = document.getElementById('description').value;
+         sendDataToBackend(divContent);
+     });
+
+     function sendDataToBackend(content) {
+         fetch('/description', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json',
+             },
+             body: JSON.stringify({ content }),
+         })
+         .then(response => {
+             if (response.ok) {
+                 console.log('Content sent successfully!');
+             } else {
+                 console.error('Failed to send content.');
+             }
+         })
+         .catch(error => console.error('Error:', error));
+     }
+ </script>
+<script src="/publier/description/script.js"></script>
+</body>
+</html>
